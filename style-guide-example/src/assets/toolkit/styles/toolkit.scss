@@ -2,6 +2,44 @@
  * Toolkit styles
  */
 
-body {
-  font-family: sans-serif;
+@import 'typography';
+@import 'buttons';
+@import 'links';
+@import 'input-fields';
+@import 'components';
+@import 'mixins';
+
+.products {
+  max-width: 1000px;
+  margin: 0 auto;
+  @include layout-grid(mobile);
+  padding: 0 0 5rem 0;
+
+  &__heading {
+    grid-column: auto / span 4;
+    text-align: center;
+    margin: 3rem 0;
+
+    @media only screen and (max-width: 480px) {
+        grid-column: auto / span 1;
+    }
+}
+}
+
+.navigation {
+  background: $lightGrey;
+  height: 60px;
+  padding: 0 2rem;
+  gap: 2rem;
+  @include center;
+}
+
+.download {
+  @include center;
+  flex-direction: column;
+  background: $lightGrey;
+
+  p {
+    max-width: 30rem;
+  }
 }

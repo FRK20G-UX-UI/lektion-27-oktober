@@ -1,0 +1,9 @@
+@import 'mixins';
+
+.card {
+    background: $middleGrey;
+    height: 20rem;
+    @include center;
+    flex-direction: column;
+    max-width: 250px;
+}
